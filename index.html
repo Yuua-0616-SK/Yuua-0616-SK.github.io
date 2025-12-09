@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trip-based info list of European countries</title>
+    </head>
+    <body>
+<h1>Europe</h1>
+<div id="countriesOutput"></div>
+
+<script>
+   const countries=[
+            {
+                "image":"https://tekce.net/files/upload/images/what-is-the-most-beautiful-city-in-spain-1.jpg",
+                "Name":"Spain",
+                "Sightseeing":"Basilica de Sagrada Familia",
+                "souvenirs":"Accessories, espadrilles, etc",
+                "Photospots":"Park Guell, Royal Alcazar, and so on",
+                "History":`Roman conquest commenced in 218 BC and let to a wide range of cultural\
+                assimilation.Ensuing the autumn of the Western Empire, Germanic tribes and Moors \
+                subjugated Hispania.After the USA was discovered, Spain went through a substantial\
+                flourishment in Europe and created an empire that covered four continents.\
+                Spanish entity in the USA fostered strong camaraderie between the two Atlantic\
+                shores, with people speaking Spanish being ubiquitous in Spain`
+            },
+
+
+            {   "image":"https://www.visitfinland.com/dam/jcr:cb479c77-099e-49a6-9788-78a2c20723d9/Lappi24_Konsta%20Punkka.jpg",
+                "Name":"Finland",
+                "Sightseeing": "Oulanka National Park, Finnish Lapland",
+                "souvenirs": "Moomin merchandise, Marimekko products, etc",
+                "Photospots": "Oulanka National Park, Inari Otsamo, Kilpisjärvi",
+                "History":`Finland forms a symbolic northern border between western and eastern Europe.\
+                dense wilderness and Russia to the east, and the Gulf of Bothnia and Sweden to the West\
+                Finland was a Russian grand duchy, but it declared independence on December 6, 1917.\
+                In 1995, it became a member of the EU, and forwarded to become a member of the NATO.`
+            },
+            
+            {   "image":"https://res.cloudinary.com/djcyhbk2e/image/upload/c_limit,f_auto,q_50,w_1400/v1/gvv/prod/dbbofw1irxswrx9bzkdc",
+                "Name":"Germany",
+                "Sightseeing":"Berlin's Brandenburg Gate, Cologne Cathedral,\
+                the fairy tale Neuschwanstein Castle in Bavaria, the scenic Black Forest, and etc",
+                "souvenirs": "Beer steins, German Chocolate Cake, German Beer",
+                "Photospots": "Lower Saxony, Sauerland, Hesse",
+                "History":`Germanic people occuped German territory a long time ago.They spoke one of the\
+                languages, thus originated as a group with the so-called first sound shift(Grimm's Law),\
+                History of the shift is still hard to identify, but clearly, those who came to speak Proto-Germanic\
+                must have been isolated from other Indo-Europeans.It is not clear which archaeological concept\
+                will denote the period of the shift. One possibility is the Northern European Bronze Age, which\
+                prospered in northern Germany and Scandinavia hundreds of years ago. Other ones would be early Iron\
+                Age cultures.`  
+            },       
+           
+
+        
+            {   "image":"https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2024/02/29031558/Bergen.jpg?tr=w-1280,f-jpg,pr-true",
+                "Name":"Luxembourg",
+                "Sightseeing":"Luxembourg City, Vianden, Echternach, etc",
+                "souvenirs":"Peckvillchen Bird Whistles, Cast-Irom Wall Plaques, Speculoos, etc",
+                "Photospots":"Ansembourg, Bourschied Castle, Chateau Vianden, etc",
+                "History":`After the Eighty Year's War, Luxembourg became a member of the Southern Netherlands,\
+                 which passed to the Austrian line in 1713. After being occupied by France, the 1815 Vienna altered Luxembourg\
+                 into a Grand Duchy in personal cooperative relationship with the Netherlands. The treaty also triggered\
+                 second partitioning of Luxembourg, first in 1658 and third in 1839. The 1839 partitioning lead to \
+                 Luxembourg's unbreakable independence, confirmed after the Luxembourg crisis in 1867.`
+            },
+
+
+            {   "image":"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/90/45/f3/a-noruega-fica-no-norte.jpg?w=900&h=400&s=1",
+                "Name":"Norway",
+                "Sightseeing":"The Fjords, Bergen, Alesund, etc",
+                "souvenirs":"Pewter goods, Hiking gear, knitwear, yarn, etc",
+                "Photospots":"Trolltunga, Tvindefossen, Voringfossen, Andalsnes",
+                "History":`About 10000 BC, earliest inhabitants migrated into the territory which is now Norway.\
+                They traveled northwards, warmed by the Gulf Stream. They ate particularly seafood and reindeer.\
+                Between 5000BC and 4000BC, the most primitive agricultural settlements appeared around Oslofjord.\
+                Gradually, between the period of 1500BC and 500BC, agricultural settlements permeated all across Norway.`
+            },
+
+
+            {   "image":"https://connectpls.com/wp-content/uploads/When_is_the_Best_Time_to_Visit_Sweden.jpg",
+                "Name":"Sweden",
+                "Sightseeing":"Stenshuvud National Park, Smaland, Stockholm, Bratfallet, etc",
+                "souvenirs":"Dala Horse, Sami handicrafts, silverware, etc",
+                "Photospots":"Solna Centrum, Gamla Stan, Abisko's Northern Lights, etc",
+                "History":`The earliest hunters in the region began following paths beihnd the retreating\
+                ice field, and the stratified clay deposits verifies the old dates. The first traces of\
+                human lives, dating from 9000 BCE, were found at Segebro outside Malmo. In the old days, people\
+                used to hunt and fish for food.`
+            },
+        
+        ];
+
+        const container = document.getElementById("countriesOutput");
+        countries.forEach(country => { 
+            container.innerHTML += ` 
+                <h2>${country.Name}</h2>
+                <img src="${country.image}" alt="${country.name}" width="300"><br>
+                <b>Sightseeing:</b> ${country.Sightseeing}<br>
+                <b>Souvenirs:</b> ${country.souvenirs}<br>
+                <b>Photospots:</b> ${country.Photospots}<br>
+                <b>History:</b> ${country.History}<br><hr>
+            `;
+        });
+
+    </script>
+    </body>
+    
+
+
+
