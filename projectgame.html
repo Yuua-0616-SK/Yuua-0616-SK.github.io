@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Click Battle Game</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+    }
+    #monster {
+      font-size: 80px;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Defeat the Monster!</h1>
+  <div id="monster">👾</div>
+  <p>Monster HP: <span id="hp">100</span></p>
+  <button onclick="attack()">Attack!</button>
+
+  <script>
+    // Set the monster's starting HP
+    let hp = 100;
+
+    // This function runs when the button is clicked
+    function attack() {
+
+      // Reduce HP by 10
+      hp -= 10;
+
+      // Update the HP number on the screen
+      document.getElementById("hp").textContent = hp;
+
+      // Check if HP is 0 or less
+      if (hp <= 0) {
+        document.getElementById("monster").textContent = "💥";
+        alert("You defeated the monster!");
+      }
+    }
+  </script>
+
+</body>
+</html>
